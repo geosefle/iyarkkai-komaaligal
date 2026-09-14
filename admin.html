@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ta" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - Iyarkkai Komaaligal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar-wrapper">
+    <nav class="navbar">
+      <div class="nav-container">
+        
+        <!-- Brand Logo -->
+        <a href="index.html" class="brand-logo">
+            <img src="IK-Images/Logo-img/logosy.jpg" alt="Logo" class="logo-img">
+          <span class="logo-text">இயற்கைக்<span class="highlight">கோமாளிகள்</span></span>
+        </a>
+
+        <!-- Mobile Toggle Button -->
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Menu">☰</button>
+
+        <!-- Nav Menu Links -->
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="projects.html" class="nav-link">Our Projects</a></li>
+          <li><a href="products.html" class="nav-link">Products</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          
+          <!-- Theme Toggle Button -->
+          <li class="nav-theme-item">
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+              <span class="sun-icon">☀️</span>
+              <span class="moon-icon">🌙</span>
+              <span class="theme-text"></span>
+            </button>
+          </li>
+          <li><a href="admin.html" class="nav-link active">Admin</a></li>
+        </ul>
+
+      </div>
+    </nav>
+  </header>
+
+  <div class="admin-container">
+
+    <!-- 🔒 LOGIN SECTION -->
+    <div id="login-section" class="product-card">
+      <h2 class="section-title">🔒 Admin Login</h2>
+      
+      <div class="form-group">
+        <label for="admin-pass">கடவுச்சொல் (Password):</label>
+        <input type="password" id="admin-pass" class="form-control" placeholder="கடவுச்சொல்லை உள்ளிடவும்...">
+      </div>
+
+      <button id="login-btn" class="add-to-cart-btn">உள்நுழை (Login)</button>
+      
+      <p style="margin-top: 15px; text-align: center;">
+        <a href="#" id="forgot-pass-link" style="color: var(--accent-color); text-decoration: underline;">பாஸ்வேர்ட் மறந்துவிட்டதா? (Forgot Password)</a>
+      </p>
+
+      <div id="login-error" class="form-status error" style="display: none;">❌ தவறான கடவுச்சொல்!</div>
+    </div>
+
+    <!-- 🔑 FORGOT / RESET PASSWORD SECTION -->
+    <div id="forgot-section" class="product-card" style="display: none;">
+      <h2 class="section-title">🔑 பாஸ்வேர்ட் மீட்டமைத்தல் (Reset Password)</h2>
+      
+      <div class="form-group">
+        <label for="reset-phone">பதிவுசெய்த போன் எண் (Admin Phone):</label>
+        <input type="tel" id="reset-phone" class="form-control" placeholder="உங்கள் போன் எண்...">
+      </div>
+
+      <div class="form-group">
+        <label for="new-pass-forgot">புதிய கடவுச்சொல் (New Password):</label>
+        <input type="password" id="new-pass-forgot" class="form-control" placeholder="புதிய பாஸ்வேர்ட்...">
+      </div>
+
+      <button id="reset-pass-btn" class="add-to-cart-btn">பாஸ்வேர்டை மாற்று (Reset Password)</button>
+      <button id="back-to-login-btn" class="add-to-cart-btn" style="background: var(--text-muted); margin-top: 10px;">திரும்பிச் செல் (Back to Login)</button>
+
+      <div id="reset-status" class="form-status" style="display: none;"></div>
+    </div>
+
+    <!-- 🛠️ MAIN ADMIN DASHBOARD -->
+    <div id="admin-panel" style="display: none;">
+
+      <!-- Header with Logout Button -->
+      <div class="admin-header-row">
+        <h2 class="admin-header-title">🛠️ Admin Dashboard</h2>
+        <button id="logout-btn" class="add-to-cart-btn btn-logout">🚪 லாக்அவுட்</button>
+      </div>
+
+      <!-- 💰 FINANCE & SALES SUMMARY -->
+      <div class="product-card">
+        <h2 class="section-title">📊 நிதி & விற்பனை அறிக்கை (Finance & Sales Overview)</h2>
+        <div class="form-grid">
+          <div class="product-card" style="text-align: center; background: var(--bg-color);">
+            <p style="color: var(--text-muted);">மொத்த விற்பனைத் தொகை</p>
+            <h1 id="total-revenue" style="color: var(--accent-color);">₹0</h1>
+          </div>
+          <div class="product-card" style="text-align: center; background: var(--bg-color);">
+            <p style="color: var(--text-muted);">மொத்த ஆர்டர்கள்</p>
+            <h1 id="total-orders-count" style="color: var(--accent-color);">0</h1>
+          </div>
+          <div class="product-card" style="text-align: center; background: var(--bg-color);">
+            <p style="color: var(--text-muted);">மொத்த பொருட்கள்</p>
+            <h1 id="total-products-count" style="color: var(--accent-color);">0</h1>
+          </div>
+        </div>
+      </div>
+
+      <!-- 🛍️ ADD / UPDATE PRODUCT FORM -->
+      <div class="product-card">
+        <h2 class="section-title">🛍️ புதிய பொருள் சேர்க்க / புதுப்பிக்க</h2>
+        <form id="product-form">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="prod-id">Product Document ID:</label>
+              <input type="text" id="prod-id" class="form-control" placeholder="e.g.honey-500gm" required>
+            </div>
+
+            <div class="form-group">
+              <label for="prod-name">பொருளின் பெயர் (Name):</label>
+              <input type="text" id="prod-name" class="form-control" placeholder="e.g. மலைத் தேன்" required>
+            </div>
+
+            <div class="form-group">
+              <label for="prod-price">விலை (Price in ₹):</label>
+              <input type="number" id="prod-price" class="form-control" placeholder="e.g. 450" required>
+            </div>
+
+            <div class="form-group">
+              <label for="prod-stock">கையிருப்பு (Stock):</label>
+              <input type="number" id="prod-stock" class="form-control" placeholder="e.g. 25" required>
+            </div>
+
+            <div class="form-group">
+              <label for="prod-uom">அலகு (UOM):</label>
+              <input type="text" id="prod-uom" class="form-control" placeholder="e.g. Bot / Pack" required>
+            </div>
+
+            <div class="form-group">
+              <label for="prod-img">படம் (Image URL):</label>
+              <input type="url" id="prod-img" class="form-control" placeholder="https://..." required>
+            </div>
+          </div>
+
+          <button type="submit" class="add-to-cart-btn">சேமி / புதுப்பி (Save to Firebase)</button>
+        </form>
+        <div id="admin-status" class="form-status" style="display: none;"></div>
+      </div>
+
+      <!-- 📦 RECENT ORDERS LIST WITH EXTERNAL SCROLL LOGIC -->
+      <div class="product-card">
+        <h2 class="section-title">📦 சமீபத்திய ஆர்டர்கள் (Recent Orders)</h2>
+        <div id="orders-list-container">
+          <p style="color: var(--text-muted);">ஆர்டர்கள் ஏற்றப்படுகின்றன...</p>
+        </div>
+      </div>
+      
+       <!-- 📩 RECENT CONTACT MESSAGES -->
+      <div class="product-card">
+        <h2 class="section-title">📩 சமீபத்திய தொடர்புகள் (Recent Contacts)</h2>
+        <div id="messages-list-container">
+          <p style="color: var(--text-muted);">செய்திகள் ஏற்றப்படுகின்றன...</p>
+        </div>
+      </div>
+
+
+      <!-- ⚙️ CHANGE PASSWORD SECTION -->
+      <div class="product-card">
+        <h2 class="section-title">⚙️ பாஸ்வேர்ட் மாற்றுக (Change Password)</h2>
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="change-new-pass">புதிய கடவுச்சொல்:</label>
+            <input type="password" id="change-new-pass" class="form-control" placeholder="புதிய பாஸ்வேர்ட்...">
+          </div>
+        </div>
+        <button id="change-pass-btn" class="add-to-cart-btn">பாஸ்வேர்டை இப்போதே மாற்று</button>
+        <div id="change-pass-status" class="form-status" style="display: none;"></div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer2" id="contact">
+    <div class="footer-container">
+      
+      <div class="footer-brand">
+        <a href="index.html" class="brand-logo">
+          <img src="IK-Images/Logo-img/logosy.jpg" alt="Logo" class="logo-img">
+          <span class="logo-text">இயற்கைக்<span class="highlight">கோமாளிகள்</span></span>
+        </a>
+        <p>இயற்கையான மற்றும் நச்சுத்தன்மையற்ற கிராமத்து உணவுகளை உங்கள் வீடுகளுக்கு நேரடியாக சேர்ப்பதுவே எங்கள் குறிக்கோள்.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <ul class="contact-info">
+          <li><i class="fa-regular fa-envelope"></i> <span>infoik@gmail.com</span></li>
+          <li><i class="fa-solid fa-phone"></i> <span>+91 97894 98792</span></li>
+          <li><i class="fa-solid fa-location-dot"></i> <span>Tamil Nadu, India</span></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Follow Us</h4>
+        <ul>
+          <li><a href="https://chat.whatsapp.com/B6wPGeOy73K5bqW0GwCIbm">WhatsApp</a></li>
+          <li><a href="https://www.facebook.com/share/1ACnvq6UaK/?mibextid=qi2Omg">FaceBook</a></li>
+          <li><a href="https://www.youtube.com/channel/UCyQzzn8t_hfoliTnBmOYoVw">YouTube</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Iyarkkai Komaaligal. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- 🟢 FIREBASE INITIALIZATION -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+    import { getFirestore } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyB6FJ9n4sl0g-cAwxUTxHrd42ftpMopVwo",
+      authDomain: "iyarkkaikomaaligal.firebaseapp.com",
+      projectId: "iyarkkaikomaaligal",
+      storageBucket: "iyarkkaikomaaligal.firebasestorage.app",
+      messagingSenderId: "297773819968",
+      appId: "1:297773819968:web:7380fe22ef3bfab09e97a5"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    window.db = getFirestore(app);
+  </script>
+
+  <!-- 🟢 MAIN JAVASCRIPT FILE -->
+  <script type="module" src="code.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ta" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - AgriTech</title>
+  
+  <!-- CSS Link -->
+  <link rel="stylesheet" href="style.css?v=2.0">
+</head>
+<body>
+
+  <!-- FLOATING GLASS NAVBAR -->
+  <header class="navbar-wrapper">
+    <nav class="navbar">
+      <div class="nav-container">
+        
+        <!-- Brand Logo -->
+        <a href="index.html" class="brand-logo">
+            <img src="IK-Images/Logo-img/logosy.jpg" alt="Logo" class="logo-img">
+          <span class="logo-text">இயற்கைக்<span class="highlight">கோமாளிகள்</span></span>
+        </a>
+
+        <!-- Mobile Toggle Button -->
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Menu">☰</button>
+
+        <!-- Nav Menu Links -->
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="projects.html" class="nav-link">Our Projects</a></li>
+          <li><a href="products.html" class="nav-link">Products</a></li>
+          <li><a href="contact.html" class="nav-link active">Contact</a></li>
+          <!-- 🟢 Theme Toggle Button (மெனுவிற்குள் சேர்க்கப்பட்டுள்ளது) -->
+        <li class="nav-theme-item">
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+            <span class="sun-icon">☀️</span>
+            <span class="moon-icon">🌙</span>
+            <span class="theme-text"></span>
+          </button>
+        </li>
+          <li><a href="admin.html" class="nav-link">Admin</a></li>
+
+        </ul>
+
+        
+      </div>
+    </nav>
+  </header>
+
+  <!-- CONTACT HERO SECTION -->
+  <section class="contact-hero">
+    <div class="hero-container">
+      <div class="hero-badge">📬 Get In Touch</div>
+      <h1 class="hero-title">எங்களைத் <span class="gradient-text">தொடர்பு கொள்ள</span></h1>
+      <p class="hero-subtitle1">உங்கள் சந்தேகங்கள், கருத்துக்கள் மற்றும் ஆர்டர்கள் தொடர்பான கேள்விகளுக்கு கீழே உள்ள படிவத்தைப் பூர்த்தி செய்யவும்.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT FORM & INFO SECTION -->
+  <section class="contact-section">
+    <div class="contact-container">
+      
+      <!-- Contact Info Box -->
+      <div class="contact-info-card">
+        <h3>தொடர்பு விவரங்கள்</h3>
+        <p>விவசாயப் பொருட்கள் மற்றும் சேவைகள் பற்றிய விவரங்களுக்கு எங்களை எப்போது வேண்டுமானாலும் தொடர்பு கொள்ளலாம்.</p>
+        
+        <div class="info-list">
+          <div class="info-item">
+            <span class="info-icon">📍</span>
+            <div>
+              <h4>முகவரி</h4>
+              <p>iyarkkaikomaligal Headquarters, தமிழ்நாடு, இந்தியா</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <span class="info-icon">📞</span>
+            <div>
+              <h4>தொலைபேசி</h4>
+              <p>+91 97894 98792</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <span class="info-icon">📧</span>
+            <div>
+              <h4>மின்னஞ்சல்</h4>
+              <p>supportik@gmail.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form Box -->
+      <div class="contact-form-card">
+        <form action="https://script.google.com/macros/s/AKfycbxN8jj5AmMB2PvYI9ZGBVuMbOteEauH66YyD9MgtQxgWrVc0nj63tysVbL08233PPnL/exec" method="POST" id="contact-form">
+          
+          <div class="form-group">
+            <label for="name">முழு பெயர் (Full Name)</label>
+            <input type="text" id="name" name="name" placeholder="உங்கள் பெயரைப் பதிவிடவும்" required>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">தொலைபேசி எண் (Phone Number)</label>
+            <input type="tel" id="phone" name="phone" placeholder="உங்கள் மொபைல் எண்" required>
+          </div>
+
+          <!-- Email Option (Optional) -->
+          <div class="form-group">
+            <label for="email">மின்னஞ்சல் முகவரி (Email Address - Optional)</label>
+            <input type="email" id="email" name="email" placeholder="example@email.com (விரும்பினால் மட்டும்)">
+          </div>
+
+          <div class="form-group">
+  <label for="district">மாவட்டம் (District)</label>
+  <select id="district" name="district" required>
+    <option value="">மாவட்டத்தைத் தேர்ந்தெடுக்கவும்</option>
+    <option value="அரியலூர்">அரியலூர்</option>
+    <option value="ஈரோடு">ஈரோடு</option>
+    <option value="கடலூர்">கடலூர்</option>
+    <option value="கன்னியாகுமரி">கன்னியாகுமரி</option>
+    <option value="கள்ளக்குறிச்சி">கள்ளக்குறிச்சி</option>
+    <option value="கரூர்">கரூர்</option>
+    <option value="காஞ்சிபுரம்">காஞ்சிபுரம்</option>
+    <option value="கிருஷ்ணகிரி">கிருஷ்ணகிரி</option>
+    <option value="கோயம்புத்தூர்">கோயம்புத்தூர்</option>
+    <option value="சிவகங்கை">சிவகங்கை</option>
+    <option value="செங்கல்பட்டு">செங்கல்பட்டு</option>
+    <option value="சென்னை">சென்னை</option>
+    <option value="சேலம்">சேலம்</option>
+    <option value="தஞ்சாவூர்">தஞ்சாவூர்</option>
+    <option value="தர்மபுரி">தர்மபுரி</option>
+    <option value="திண்டுக்கல்">திண்டுக்கல்</option>
+    <option value="திருச்சிராப்பள்ளி">திருச்சிராப்பள்ளி</option>
+    <option value="திருநெல்வேலி">திருநெல்வேலி</option>
+    <option value="திருப்பத்தூர்">திருப்பத்தூர்</option>
+    <option value="திருப்பூர்">திருப்பூர்</option>
+    <option value="திருவள்ளூர்">திருவள்ளூர்</option>
+    <option value="திருவண்ணாமலை">திருவண்ணாமலை</option>
+    <option value="திருவாரூர்">திருவாரூர்</option>
+    <option value="தூத்துக்குடி">தூத்துக்குடி</option>
+    <option value="தென்காசி">தென்காசி</option>
+    <option value="தேனி">தேனி</option>
+    <option value="நாகப்பட்டினம்">நாகப்பட்டினம்</option>
+    <option value="நாமக்கல்">நாமக்கல்</option>
+    <option value="நீலகிரி">நீலகிரி</option>
+    <option value="புதுக்கோட்டை">புதுக்கோட்டை</option>
+    <option value="பெரம்பலூர்">பெரம்பலூர்</option>
+    <option value="மதுரை">மதுரை</option>
+    <option value="மயிலாடுதுறை">மயிலாடுதுறை</option>
+    <option value="இராமநாதபுரம்">இராமநாதபுரம்</option>
+    <option value="இராணிப்பேட்டை">இராணிப்பேட்டை</option>
+    <option value="விருதுநகர்">விருதுநகர்</option>
+    <option value="விழுப்புரம்">விழுப்புரம்</option>
+    <option value="வேலூர்">வேலூர்</option>
+  </select>
+</div>
+
+          <div class="form-group">
+            <label for="subject">காரணம் (Subject)</label>
+            <select id="subject" name="subject" required>
+              <option value="">காரணத்தைத் தேர்ந்தெடுக்கவும்</option>
+              <option value="பொருட்கள் பற்றிய கேள்வி">பொருட்கள் பற்றிய கேள்வி</option>
+              <option value="புதிய ஆர்டர் செய்ய">புதிய ஆர்டர் செய்ய</option>
+              <option value="விவசாயிகள் தொடர்பு/கூட்டமைப்பு">விவசாயிகள் தொடர்பு/கூட்டமைப்பு</option>
+              <option value="மற்றவை">மற்றவை</option>
+            </select>
+          </div>
+
+          <!-- Preferred Date & Time Fields -->
+          <div class="form-group">
+            <label for="preferred-date">கால் செய்ய வேண்டிய தேதி (Preferred Date)</label>
+            <input type="date" id="preferred-date" name="preferred_date" required>
+          </div>
+
+          <div class="form-group">
+            <label for="preferred-time">கால் செய்ய வேண்டிய நேரம் (Preferred Time)</label>
+            <input type="time" id="preferred-time" name="preferred_time" required>
+          </div>
+
+          <div class="form-group">
+            <label for="message">செய்தி (Message)</label>
+            <textarea id="message" name="message" rows="4" placeholder="உங்கள் கேள்விகள் அல்லது கருத்துக்களை எழுதவும்..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn-glow-form" id="submit-btn">சமர்ப்பிக்க (Submit Request)</button>
+          
+          <div id="form-status" class="form-status"></div>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TECH FOOTER SECTION -->
+  <footer class="footer2" id="contact">
+    <div class="footer-container">
+      
+      <div class="footer-brand">
+        <a href="index.html" class="brand-logo">
+          <img src="IK-Images/Logo-img/logosy.jpg" alt="Logo" class="logo-img">
+          <span class="logo-text">இயற்கைக்<span class="highlight">கோமாளிகள்</span></span>
+        </a>
+        <p>இயற்கையான மற்றும் நச்சுத்தன்மையற்ற கிராமத்து உணவுகளை உங்கள் வீடுகளுக்கு நேரடியாக சேர்ப்பதுவே எங்கள் குறிக்கோள்.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <ul>
+          <li>📧 infoik@gmail.com</li>
+          <li>📞 +91 97894 98792</li>
+          <li>📍 Tamil Nadu, India</li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Follow Us</h4>
+        <ul>
+          <li><a href="https://chat.whatsapp.com/B6wPGeOy73K5bqW0GwCIbm">WhatsApp</a></li>
+          <li><a href="https://www.facebook.com/share/1ACnvq6UaK/?mibextid=qi2Omg">FaceBook</a></li>
+          <li><a href="https://www.youtube.com/channel/UCyQzzn8t_hfoliTnBmOYoVw">YouTube</a></li>
+        </ul>
+      </div>
+
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Iyarkkai Komaaligal. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+    <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+    import { getFirestore } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyB6FJ9n4sl0g-cAwxUTxHrd42ftpMopVwo",
+      authDomain: "iyarkkaikomaaligal.firebaseapp.com",
+      projectId: "iyarkkaikomaaligal",
+      storageBucket: "iyarkkaikomaaligal.firebasestorage.app",
+      messagingSenderId: "297773819968",
+      appId: "1:297773819968:web:7380fe22ef3bfab09e97a5"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    window.db = getFirestore(app); // Firestore Global Connection
+  </script>
+
+  <!-- Type="module" ஆக மாற்றப்பட்டுள்ளது -->
+  <script type="module" src="code.js"></script>
+
+</body>
+</html>

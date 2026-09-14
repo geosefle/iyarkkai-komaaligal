@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ta" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Products - AgriTech</title>
+  
+  <!-- CSS Link -->
+  <link rel="stylesheet" href="style.css?v=3.0">
+</head>
+<body>
+
+  <!-- FLOATING GLASS NAVBAR -->
+  <header class="navbar-wrapper">
+    <nav class="navbar">
+      <div class="nav-container">
+        
+        <!-- Brand Logo -->
+        <a href="index.html" class="brand-logo">
+            <img src="IK-Images/Logo-img/logosy.jpg" alt="Logo" class="logo-img">
+          <span class="logo-text">இயற்கைக்<span class="highlight">கோமாளிகள்</span></span>
+        </a>
+
+        <!-- Mobile Toggle Button -->
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Menu">☰</button>
+
+        <!-- Nav Menu Links -->
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="projects.html" class="nav-link">Our Projects</a></li>
+          <li><a href="products.html" class="nav-link active">Products</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <!-- 🟢 Theme Toggle Button (மெனுவிற்குள் சேர்க்கப்பட்டுள்ளது) -->
+        <li class="nav-theme-item">
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+            <span class="sun-icon">☀️</span>
+            <span class="moon-icon">🌙</span>
+            <span class="theme-text"></span>
+          </button>
+        </li>
+          <li><a href="admin.html" class="nav-link">Admin</a></li>
+
+        </ul>
+
+        
+      </div>
+    </nav>
+  </header>
+
+  <!-- PRODUCTS HERO SECTION -->
+<!-- PRODUCTS SECTION -->
+<section class="products-hero">
+    <div class="hero-container">
+      <div class="hero-badge">🛒 Fresh & Organic</div>
+      <h1 class="hero-title">எங்களின் <span class="gradient-text">இயற்கை பொருட்கள்</span></h1>
+      <p class="hero-subtitle1">இயற்கை வேளாண்பண்ணையிலிருந்து நேரடியாக உங்கள் வீட்டிற்கு வரும் 100% தூய்மையான தானியங்கள் மற்றும் பாரம்பரிய உணவுகள்.</p>
+    </div>
+  </section>
+<!-- PRODUCTS SECTION -->
+<section id="products" class="products-section">
+  <h2 class="section-title">எங்களது தயாரிப்புகள்</h2>
+  
+  <!-- இந்த ஒரே திவில் தான் ஃபயர்பேஸில் இருந்து பொருட்கள் தானாக லோட் ஆகும் -->
+  <div id="products-grid" class="products-grid">
+    <p style="text-align: center; color: var(--text-muted);">பொருட்கள் ஏற்றப்படுகின்றன...</p>
+  </div>
+</section>
+
+
+  <!-- ROUND FLOATING CART BUTTON -->
+ <button class="floating-cart-btn" id="floating-cart-btn" aria-label="View Cart">
+    🛒
+    <span class="cart-count" id="cart-count">0</span>
+  </button>
+
+  <!-- CART SLIDE DRAWER -->
+  <div class="cart-drawer-overlay" id="cart-overlay"></div>
+  <div class="cart-drawer" id="cart-drawer">
+    <div class="cart-header">
+      <h2>உங்கள் Cart 🛒</h2>
+      <button class="close-drawer-btn" id="close-cart-btn">✖</button>
+    </div>
+    <div class="cart-items-body" id="cart-items-container">
+      <p class="empty-msg">உங்கள் கார்ட்டில் பொருட்கள் எதுவும் இல்லை.</p>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total-box">
+        <span>மொத்தத் தொகை:</span>
+        <span class="cart-total-price" id="cart-total-price">₹0</span>
+      </div>
+      <button class="btn-glow-form" id="open-checkout-btn" disabled>Buy Now / Checkout →</button>
+    </div>
+  </div>
+
+  <!-- CHECKOUT MODAL FORM -->
+<div class="modal-overlay" id="checkout-modal">
+  <div class="modal-card">
+    <div class="modal-header">
+      <h3>வாடிக்கையாளர் & விநியோக விவரங்கள்</h3>
+      <button class="close-drawer-btn" id="close-modal-btn">✖</button>
+    </div>
+    <div class="modal-body">
+      
+      <form id="checkout-form">
+        
+        <div class="form-group">
+          <label for="c-name">முழு பெயர் (Full Name)</label>
+          <!-- name="customerName" என மாற்றப்பட்டுள்ளது -->
+          <input type="text" id="c-name" name="customerName" placeholder="உங்கள் பெயர்" required>
+        </div>
+
+        <div class="form-group">
+          <label for="c-phone">தொலைபேசி எண் (Phone Number)</label>
+          <!-- name="customerPhone" என மாற்றப்பட்டுள்ளது -->
+          <input type="tel" id="c-phone" name="customerPhone" placeholder="9876543210" required>
+        </div>
+
+        <div class="form-group">
+          <label for="c-email">மின்னஞ்சல் (Email Address)</label>
+          <!-- name="customerEmail" என மாற்றப்பட்டுள்ளது -->
+          <input type="email" id="c-email" name="customerEmail" placeholder="example@gmail.com">
+        </div>
+
+        <div class="form-group">
+          <label for="c-address">முகவரி (Full Delivery Address)</label>
+          <!-- name="customerAddress" என மாற்றப்பட்டுள்ளது -->
+          <textarea id="c-address" name="customerAddress" rows="3" placeholder="வீட்டு எண், தெரு பெயர், ஊர், பின்கோடு..." required></textarea>
+        </div>
+
+        <input type="hidden" name="Order Summary" id="hidden-order-details">
+        <input type="hidden" name="Total Amount" id="hidden-total-amount">
+
+        <div class="order-summary-preview">
+          <h4>ஆர்டர் சுருக்கம்:</h4>
+          <div id="modal-order-summary"></div>
+        </div>
+
+        <button type="submit" class="btn-glow-form" id="place-order-btn">ஆர்டரை உறுதிசெய் (Confirm Order)</button>
+        <div id="checkout-status" class="form-status"></div>
+      </form>
+
+    </div>
+  </div>
+</div>
+
+
+
+  <!-- FOOTER -->
+  <footer class="footer2" id="contact">
+    <div class="footer-container">
+      
+      <div class="footer-brand">
+        <a href="index.html" class="brand-logo">
+          <img src="IK-Images/Logo-img/logosy.jpg" alt="Logo" class="logo-img">
+          <span class="logo-text">இயற்கைக்<span class="highlight">கோமாளிகள்</span></span>
+        </a>
+        <p>இயற்கையான மற்றும் நச்சுத்தன்மையற்ற கிராமத்து உணவுகளை உங்கள் வீடுகளுக்கு நேரடியாக சேர்ப்பதுவே எங்கள் குறிக்கோள்.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+  <ul class="contact-info">
+    <li><i class="fa-regular fa-envelope"></i> <span>infoik@gmail.com</span></li>
+    <li><i class="fa-solid fa-phone"></i> <span>+91 97894 98792</span></li>
+    <li><i class="fa-solid fa-location-dot"></i> <span>Tamil Nadu, India</span></li>
+  </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Follow Us</h4>
+        <ul>
+          <li><a href="https://chat.whatsapp.com/B6wPGeOy73K5bqW0GwCIbm">WhatsApp</a></li>
+          <li><a href="https://www.facebook.com/share/1ACnvq6UaK/?mibextid=qi2Omg">FaceBook</a></li>
+          <li><a href="https://www.youtube.com/channel/UCyQzzn8t_hfoliTnBmOYoVw">YouTube</a></li>
+        </ul>
+      </div>
+
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Iyarkkai Komaaligal. All rights reserved.</p>
+    </div>
+  </footer>
+  
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+    import { getFirestore } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyB6FJ9n4sl0g-cAwxUTxHrd42ftpMopVwo",
+      authDomain: "iyarkkaikomaaligal.firebaseapp.com",
+      projectId: "iyarkkaikomaaligal",
+      storageBucket: "iyarkkaikomaaligal.firebasestorage.app",
+      messagingSenderId: "297773819968",
+      appId: "1:297773819968:web:7380fe22ef3bfab09e97a5"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    window.db = getFirestore(app); // Firestore Global Connection
+  </script>
+
+  <!-- Type="module" ஆக மாற்றப்பட்டுள்ளது -->
+  <script type="module" src="code.js"></script>
+</body>
+</html>
