@@ -13,40 +13,50 @@
 
   <!-- FLOATING GLASS NAVBAR -->
   <header class="navbar-wrapper">
-    <nav class="navbar">
-      <div class="nav-container">
-        
-        <!-- Brand Logo -->
-        <a href="index.html" class="brand-logo">
-            <img src="logosy.jpg" alt="Logo" class="logo-img">
-          <span class="logo-text">இயற்கைக்<span class="highlight">கோமாளிகள்</span></span>
-        </a>
+  <nav class="navbar">
+    <div class="nav-container">
+      
+      <!-- Brand Logo -->
+      <a href="index.html" class="brand-logo">
+        <img src="IK-Images/Logo-img/logosy.jpg" alt="Logo" class="logo-img">
+        <span class="logo-text">இயற்கைக்<span class="highlight">கோமாளிகள்</span></span>
+      </a>
 
-        <!-- Mobile Toggle Button -->
-        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Menu">☰</button>
+      <!-- Mobile Toggle Button -->
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Menu">☰</button>
 
-        <!-- Nav Menu Links -->
-        <ul class="nav-menu" id="nav-menu">
-          <li><a href="index.html" class="nav-link">Home</a></li>
-          <li><a href="about.html" class="nav-link active">About Us</a></li>
-          <li><a href="projects.html" class="nav-link">Our Projects</a></li>
-          <li><a href="products.html" class="nav-link">Products</a></li>
-          <li><a href="contact.html" class="nav-link">Contact</a></li>
-          <!-- 🟢 Theme Toggle Button (மெனுவிற்குள் சேர்க்கப்பட்டுள்ளது) -->
-        <li class="nav-theme-item">
-          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
-            <span class="sun-icon">☀️</span>
-            <span class="moon-icon">🌙</span>
-            <span class="theme-text"></span>
-          </button>
+      <!-- Nav Menu Links -->
+      <ul class="nav-menu" id="nav-menu">
+        <!-- 🟢 நேரடியாக வெளியே தெரியும் Links -->
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="projects.html" class="nav-link">Our Projects</a></li>
+        <li><a href="products.html" class="nav-link active">Products</a></li>
+
+        <!-- 🟢 3 Dots Dropdown (More Menu) -->
+        <li class="more-dropdown">
+          <button class="more-btn" id="more-btn" aria-label="More Options">⋮</button>
+          
+          <ul class="dropdown-menu" id="dropdown-menu">
+            <li><a href="about.html" class="dropdown-link">About Us</a></li>
+            <li><a href="contact.html" class="dropdown-link">Contact</a></li>
+            
+            <li class="nav-theme-item">
+              <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+                <span class="sun-icon">☀️</span>
+                <span class="moon-icon">🌙</span>
+                <span class="theme-text"></span>
+              </button>
+            </li>
+
+            <li><a href="admin.html" class="dropdown-link admin-link">Admin</a></li>
+          </ul>
         </li>
-          <li><a href="admin.html" class="nav-link">Admin</a></li>
-        </ul>
 
-        
-      </div>
-    </nav>
-  </header>
+      </ul>
+
+    </div>
+  </nav>
+</header>
 
   <!-- ABOUT HERO SECTION -->
   <section class="about-hero">
