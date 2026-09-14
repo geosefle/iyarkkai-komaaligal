@@ -10,7 +10,7 @@ let cart = [];
 const TELEGRAM_BOT_TOKEN = "8800472610:AAFTM4UwoaN1-Ip0RIz42xiChNszhbt5btk";
 
 // இங்கு நீங்கள் எத்தனை Chat ID வேண்டுமானாலும் கமா (,) போட்டுச் சேர்த்துக் கொள்ளலாம்
-const TELEGRAM_CHAT_IDS = ["7068750895", "இன்னொரு_CHAT_ID_இங்கே"]; 
+const TELEGRAM_CHAT_IDS = ["7068750895", "1082998253"]; 
 
 async function sendTelegramNotification(messageText) {
   // அனைத்து Chat ID-களுக்கும் மெசேஜ் அனுப்ப Loop பயன்படுத்தப்படுகிறது
