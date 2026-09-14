@@ -144,29 +144,6 @@ body {
   gap: 1rem;
 }
 
-.theme-toggle {
-  background: rgba(22, 163, 74, 0.08);
-  border: 1px solid var(--border-color);
-  color: var(--text-color);
-  border-radius: 50%;
-  width: 38px;
-  height: 38px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-}
-
-.theme-toggle:hover {
-  border-color: var(--accent-color);
-  transform: scale(1.08);
-}
-
-.moon-icon { display: none; }
-[data-theme="dark"] .sun-icon { display: none; }
-[data-theme="dark"] .moon-icon { display: inline; }
-
 .mobile-menu-btn {
   display: none;
   background: none;
@@ -175,6 +152,146 @@ body {
   color: var(--text-color);
   cursor: pointer;
 }
+
+/* ========================================================
+   2. THREE DOTS DROPDOWN (DESKTOP & MOBILE)
+   ======================================================== */
+.more-dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Three Dots Button */
+.more-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--text-color);
+  cursor: pointer;
+  padding: 0 10px;
+  line-height: 1;
+}
+
+/* Hidden Dropdown Menu - Dark/Light Mode Supported */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 120%;
+  right: 0;
+  background-color: var(--card-bg) !important;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--card-shadow);
+  border-radius: 12px;
+  min-width: 170px;
+  list-style: none;
+  padding: 10px 0;
+  z-index: 1000;
+  text-align: center;
+}
+
+/* Show Dropdown on Hover or Toggle */
+.more-dropdown:hover .dropdown-menu,
+.dropdown-menu.show {
+  display: block;
+}
+
+.dropdown-menu li {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Dropdown Links & Hover State */
+.dropdown-link {
+  display: block;
+  width: 100%;
+  padding: 10px 16px;
+  color: var(--text-color) !important;
+  text-decoration: none;
+  font-size: 0.95rem;
+  text-align: center !important;
+  transition: background 0.2s, color 0.2s;
+}
+
+.dropdown-link:hover {
+  background-color: var(--border-color);
+  color: var(--accent-color) !important;
+}
+
+/* Theme Toggle Container & Icon Alignment */
+.dropdown-menu .nav-theme-item {
+  width: 100%;
+  padding: 8px 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dropdown-menu .theme-toggle {
+  background: transparent !important;
+  border: none !important;
+  padding: 4px 8px !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  color: var(--text-color) !important;
+  width: 100%;
+}
+
+.dropdown-menu .nav-theme-item:hover {
+  background-color: var(--border-color);
+}
+
+.dropdown-menu .theme-toggle:hover {
+  color: var(--accent-color) !important;
+}
+
+/* Admin Link Styling */
+.admin-link {
+  font-weight: bold;
+  color: var(--accent-color) !important;
+}
+
+/* Theme Icon Visibility Rules */
+.moon-icon { display: none; }
+[data-theme="dark"] .sun-icon { display: none; }
+[data-theme="dark"] .moon-icon { display: inline; }
+
+/* ========================================================
+   3. MOBILE VIEW RESPONSIVENESS
+   ======================================================== */
+@media (max-width: 768px) {
+  .more-dropdown {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .more-btn {
+    display: none;
+  }
+
+  .dropdown-menu {
+    position: static;
+    display: block;
+    box-shadow: none;
+    border: none;
+    padding: 0;
+    width: 100%;
+    background: transparent !important;
+  }
+  
+  .dropdown-link {
+    padding: 10px 0;
+  }
+}
+
 
 /* ========================================================
    2. HERO TECH SECTION
