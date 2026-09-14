@@ -180,7 +180,7 @@ body {
    2. HERO TECH SECTION
    ======================================================== */
 .hero {
-    background: linear-gradient(rgba(27, 67, 50, 0.85), rgba(45, 106, 79, 0.85)), url('IK-Images/Home-img/homehero.jpg') center/cover no-repeat;
+    background: linear-gradient(rgba(27, 67, 50, 0.85), rgba(45, 106, 79, 0.85)), url('homehero.jpg') center/cover no-repeat;
     color: #ffffff;
     text-align: center;
     padding: 5rem 1rem;
@@ -444,7 +444,7 @@ body {
   --text-color: #ffffff;
   --text-muted: #cbd5e1;
   --border-color: rgba(255, 255, 255, 0.15);
-  background: linear-gradient(rgba(27, 67, 50, 0.85), rgba(45, 106, 79, 0.85)), url('IK-Images/Logo-img/nav-center-img.jpg') center/100% 100% no-repeat;
+  background: linear-gradient(rgba(27, 67, 50, 0.85), rgba(45, 106, 79, 0.85)), url('nav-center-img.jpg') center/100% 100% no-repeat;
 }
 
 .footer1 {
@@ -459,7 +459,7 @@ body {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(rgba(128, 128, 128, 0) 0%, rgba(0, 0, 0, 0.4) 90%), url('IK-Images/Logo-img/nav-center-img.jpg') center/100% 100% no-repeat;
+  background: radial-gradient(rgba(128, 128, 128, 0) 0%, rgba(0, 0, 0, 0.4) 90%), url('nav-center-img.jpg') center/100% 100% no-repeat;
   opacity: 0.1;
   z-index: 0;
 }
