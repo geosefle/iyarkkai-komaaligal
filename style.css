@@ -791,9 +791,11 @@ body {
   background: var(--bg-color);
 }
 
+/* 1. TIMELINE GRID (மையத்தில் அமைய) */
 .timeline-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1.5rem;
   margin-top: 2.5rem;
 }
@@ -805,11 +807,16 @@ body {
   border-radius: 16px;
   position: relative;
   transition: transform 0.3s ease;
+  /* 3 கார்டுகள் ஒரே வரியில் வர அகலம் */
+  flex: 1 1 calc(33.333% - 1.5rem);
+  min-width: 280px;
+  max-width: 340px;
 }
 
 .timeline-card:hover {
   transform: translateY(-5px);
 }
+
 
 .timeline-card.highlight-border {
   border-color: var(--accent-color);
@@ -853,9 +860,11 @@ body {
   border-bottom: 1px solid var(--border-color);
 }
 
+/* 2. STATS GRID (மையத்தில் அமைய) */
 .stats-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1.5rem;
   margin-top: 2.5rem;
 }
@@ -866,7 +875,12 @@ body {
   padding: 2rem 1.5rem;
   border-radius: 16px;
   text-align: center;
+  /* 3 கார்டுகள் ஒரே வரியில் வர அகலம் */
+  flex: 1 1 calc(33.333% - 1.5rem);
+  min-width: 220px;
+  max-width: 320px;
 }
+
 
 .stat-number {
   font-size: 2.2rem;
